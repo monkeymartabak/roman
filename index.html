@@ -13,15 +13,20 @@
 
     html, body {
       font-family: Georgia, serif;
-      background-color: #fff;
+      background: #fff;
       color: #000;
       font-size: 16px;
       line-height: 1.6;
     }
 
     body {
-      padding: 4rem 2rem;
-      max-width: 600px;
+      padding: 3rem 2rem;
+      max-width: none;
+    }
+
+    .container {
+      width: 400px;
+      padding-left: 2rem;
     }
 
     header {
@@ -29,8 +34,8 @@
     }
 
     header img {
-      width: 60px;
-      height: 60px;
+      width: 48px;
+      height: 48px;
       object-fit: contain;
       margin-bottom: 1rem;
     }
@@ -39,6 +44,7 @@
       font-size: 1.25rem;
       text-transform: lowercase;
       font-weight: normal;
+      max-width: 90%;
     }
 
     section {
@@ -77,63 +83,68 @@
     }
 
     @media (max-width: 600px) {
-      body {
-        padding: 2rem 1rem;
+      .container {
+        width: 100%;
+        padding-left: 1rem;
       }
 
       header img {
-        width: 48px;
-        height: 48px;
+        width: 40px;
+        height: 40px;
       }
     }
   </style>
 </head>
 <body>
 
-  <header>
-    <a href="#">
-      <img src="https://via.placeholder.com/60" alt="logo or symbol" />
-    </a>
-    <h1>roman macdonald is a visual communication designer</h1>
-  </header>
+  <div class="container">
 
-  <section>
-    <h2>featured work</h2>
-    <ul>
-      <li>
-        <a href="#">ethical fashion branding</a><br>
-        <span class="note">identity and storytelling for a worker-centered clothing label</span>
-      </li>
-      <li>
-        <a href="#">mlaku surabaya</a><br>
-        <span class="note">a clean, illustrated map to encourage local exploration</span>
-      </li>
-    </ul>
-  </section>
+    <header>
+      <a href="#">
+        <img src="https://via.placeholder.com/48" alt="symbol or icon" />
+      </a>
+      <h1>roman macdonald is a visual communication designer</h1>
+    </header>
 
-  <section>
-    <h2>all work</h2>
-    <ul>
-      <li>
-        <a href="#">sparkling surabaya</a><br>
-        <span class="note">reimagining the city's tourism branding system</span>
-      </li>
-      <li>
-        <a href="#">personal card game</a><br>
-        <span class="note">self-reflection through analog play and no scoring</span>
-      </li>
-      <li>
-        <a href="#">poster archive</a><br>
-        <span class="note">typographic experiments from 2022–2025</span>
-      </li>
-    </ul>
-  </section>
+    <section>
+      <h2>featured work</h2>
+      <ul>
+        <li>
+          <a href="#">ethical fashion branding</a><br>
+          <span class="note">identity and storytelling for a worker-centered clothing label</span>
+        </li>
+        <li>
+          <a href="#">mlaku surabaya</a><br>
+          <span class="note">a clean, illustrated map to encourage local exploration</span>
+        </li>
+      </ul>
+    </section>
 
-  <section>
-    <h2>about / contact</h2>
-    <p>currently based in surabaya. focused on editorial, branding, and visual systems that feel honest. available for remote freelance or internship work.</p>
-    <p><a href="mailto:hello@romanmacdonald.com">hello@romanmacdonald.com</a></p>
-  </section>
+    <section>
+      <h2>all work</h2>
+      <ul>
+        <li>
+          <a href="#">sparkling surabaya</a><br>
+          <span class="note">reimagining the city's tourism branding system</span>
+        </li>
+        <li>
+          <a href="#">personal card game</a><br>
+          <span class="note">self-reflection through analog play and no scoring</span>
+        </li>
+        <li>
+          <a href="#">poster archive</a><br>
+          <span class="note">typographic experiments from 2022–2025</span>
+        </li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>about / contact</h2>
+      <p>currently based in surabaya. focused on editorial, branding, and visual systems that feel honest. available for remote freelance or internship work.</p>
+      <p><a href="mailto:hello@romanmacdonald.com">hello@romanmacdonald.com</a></p>
+    </section>
+
+  </div>
 
 </body>
 </html>
