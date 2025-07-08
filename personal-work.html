@@ -18,12 +18,14 @@
       display: flex;
       flex-direction: column;
       min-height: 100vh;
+      padding-top: 2rem; /* Added top padding */
     }
 
     .container {
       display: flex;
       flex: 1;
       padding: 2rem;
+      padding-top: 0; /* no extra padding under icon */
     }
 
     .sidebar {
@@ -49,10 +51,11 @@
       font-weight: 600;
       text-transform: uppercase;
       letter-spacing: 0.05em;
+      transition: font-weight 0.2s;
     }
 
     .nav-group a:hover {
-      font-weight: 800;
+      font-weight: 800 !important;
     }
 
     .main-content {
@@ -61,14 +64,32 @@
 
     .image-grid {
       display: grid;
-      grid-template-columns: repeat(1, 1fr);
-      gap: 2rem;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+    }
+
+    .image-grid .image-wrapper {
+      position: relative;
+      width: 100%;
+      padding-top: 100%; /* Square aspect ratio */
+      overflow: hidden;
+      cursor: pointer;
     }
 
     .image-grid img {
+      position: absolute;
+      top: 0;
+      left: 0;
       width: 100%;
-      height: auto;
-      display: block;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.3s ease, z-index 0s;
+      z-index: 1;
+    }
+
+    .image-grid .image-wrapper:hover img {
+      transform: scale(2);
+      z-index: 10;
     }
 
     footer {
@@ -78,9 +99,15 @@
       margin: 4rem 0 2rem;
     }
 
-    @media (min-width: 700px) {
+    @media (max-width: 768px) {
       .image-grid {
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 500px) {
+      .image-grid {
+        grid-template-columns: 1fr;
       }
     }
   </style>
@@ -88,7 +115,7 @@
 <body>
 
   <!-- Top small centered icon -->
-  <img src="https://cdn.discordapp.com/attachments/885060651427459073/1392190400487362733/chinken24x.png?ex=686ea1d9&is=686d5059&hm=22d8a0f7add87f6e4eb67f8b201d8babedfb47a8d78abc61487b576cee431868&" alt="Top Icon" class="icon">
+  <img src="https://cdn.discordapp.com/attachments/885060651427459073/1392190400487362733/chinken24x.png" alt="Top Icon" class="icon">
 
   <div class="container">
     <!-- Sidebar navigation links -->
@@ -103,11 +130,21 @@
     <!-- Main image grid -->
     <div class="main-content">
       <div class="image-grid">
-        <img src="https://media.canva.com/v2/image-resize/format:JPG/height:800/quality:92/uri:ifs%3A%2F%2FM%2Fa0cdcdd6-6c7f-4eec-8616-b923e021a916/watermark:F/width:640?csig=AAAAAAAAAAAAAAAAAAAAAPIIcDauAIaK7Fl5jJ04V_SfxWVlDhfVZs15Ztxcgqfa&exp=1752005919&osig=AAAAAAAAAAAAAAAAAAAAALQLTy1SoaK-R0ZbZ-DeJik6oS5FiesehwBBZv5Bx4q8&signer=media-rpc&x-canva-quality=screen" alt="Work 1">
-        <img src="https://media.canva.com/v2/image-resize/format:PNG/height:800/quality:100/uri:ifs%3A%2F%2FM%2Fe9bccf3a-bf0a-4ff5-a03a-fb0ad54d742d/watermark:F/width:640?csig=AAAAAAAAAAAAAAAAAAAAAM1VtU0-4I-rLC3sZEDWwGo1jTa7DJUkaa3wYOzRVaST&exp=1752005439&osig=AAAAAAAAAAAAAAAAAAAAAPtghuradWViwyyRfTgN72goXVfhGx8GGxxozekSFjZW&signer=media-rpc&x-canva-quality=screen" alt="Work 2">
-        <img src="https://media.canva.com/v2/image-resize/format:PNG/height:800/quality:100/uri:ifs%3A%2F%2FM%2F7853663c-2e8b-4354-9e64-9851365be2a0/watermark:F/width:640?csig=AAAAAAAAAAAAAAAAAAAAAMpRTcNIqi2RPcYw5R8LPUNEFZS-C75bVP3M9lJZEJdH&exp=1752004650&osig=AAAAAAAAAAAAAAAAAAAAAOTvVg9VQQZtRkLmRgtVJH6avQfwwJBSAvhtFUUYCOW_&signer=media-rpc&x-canva-quality=screen" alt="Work 3">
-        <img src="https://media.canva.com/v2/image-resize/format:PNG/height:800/quality:100/uri:ifs%3A%2F%2FM%2F92ba9ac5-bfe0-45f6-8a10-ad1ac2023ab0/watermark:F/width:827?csig=AAAAAAAAAAAAAAAAAAAAAEfIEzVkzGwCirQJczzY7QJDmKgg6Jdw6eGacf34Qy0t&exp=1752011479&osig=AAAAAAAAAAAAAAAAAAAAAPNTu45ZV1TmkuMG-17u3ScaC9rA1nfYmSScvDvbTIYV&signer=media-rpc&x-canva-quality=screen_2x" alt="Work 4">
-        <img src="https://scontent-cgk2-2.cdninstagram.com/v/t51.29350-15/448660762_461519793144912_5839706109620514212_n.jpg?stp=dst-jpg_e35_tt6&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0uaW1hZ2VfdXJsZ2VuLjE0NDB4MTgwMC5zZHIuZjI5MzUwLmRlZmF1bHRfaW1hZ2UifQ&_nc_ht=scontent-cgk2-2.cdninstagram.com&_nc_cat=100&_nc_oc=Q6cZ2QFjhI98Zs1MGAQxaIZR4yMZz6h4RtK37dx6nXJWXDDGoMWAsxnKhYxoaJeUpfTme3o&_nc_ohc=nAU70fO9pp0Q7kNvwHXKCOt&_nc_gid=mq4TcbHoRCUHQYj5aHFlLg&edm=AP4sbd4BAAAA&ccb=7-5&ig_cache_key=MzM5NDQ3OTA1NTc4NzkzMzMxNg%3D%3D.3-ccb7-5&oh=00_AfRvkchyKjn_yXaiymfRvSrmzkoJK_3Y3y77hCsVsjJUdA&oe=687331BA&_nc_sid=7a9f4b" alt="Work 5">
+        <div class="image-wrapper">
+          <img src="https://media.canva.com/v2/image-resize/format:JPG/height:800/quality:92/uri:ifs%3A%2F%2FM%2Fa0cdcdd6-6c7f-4eec-8616-b923e021a916/watermark:F/width:640" alt="Work 1">
+        </div>
+        <div class="image-wrapper">
+          <img src="https://media.canva.com/v2/image-resize/format:PNG/height:800/quality:100/uri:ifs%3A%2F%2FM%2Fe9bccf3a-bf0a-4ff5-a03a-fb0ad54d742d/watermark:F/width:640" alt="Work 2">
+        </div>
+        <div class="image-wrapper">
+          <img src="https://media.canva.com/v2/image-resize/format:PNG/height:800/quality:100/uri:ifs%3A%2F%2FM%2F7853663c-2e8b-4354-9e64-9851365be2a0/watermark:F/width:640" alt="Work 3">
+        </div>
+        <div class="image-wrapper">
+          <img src="https://media.canva.com/v2/image-resize/format:PNG/height:800/quality:100/uri:ifs%3A%2F%2FM%2F92ba9ac5-bfe0-45f6-8a10-ad1ac2023ab0/watermark:F/width:827" alt="Work 4">
+        </div>
+        <div class="image-wrapper">
+          <img src="https://scontent-cgk2-2.cdninstagram.com/v/t51.29350-15/448660762_461519793144912_5839706109620514212_n.jpg?stp=dst-jpg_e35_p640x640_sh0.08_tt6&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0uaW1hZ2VfdXJsZ2VuLjE0NDB4MTgwMC5zZHIuZjI5MzUwLmRlZmF1bHRfaW1hZ2UifQ&_nc_ht=scontent-cgk2-2.cdninstagram.com&_nc_cat=100&_nc_oc=Q6cZ2QFjhI98Zs1MGAQxaIZR4yMZz6h4RtK37dx6nXJWXDDGoMWAsxnKhYxoaJeUpfTme3o&_nc_ohc=nAU70fO9pp0Q7kNvwHXKCOt&_nc_gid=mq4TcbHoRCUHQYj5aHFlLg&edm=AP4sbd4BAAAA&ccb=7-5&ig_cache_key=MzM5NDQ3OTA1NTc4NzkzMzMxNg==.3-ccb7-5&oh=00_AfQOO7QDekjAMf2v4iK8ul7To3v2l8OVa9_ly-nIOiqnjg&oe=687331BA&_nc_sid=7a9f4b%20640w" alt="Work 5">
+        </div>
       </div>
     </div>
   </div>
