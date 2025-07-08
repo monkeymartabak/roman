@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>ROMAN FUCKING MACDONALD</title>
   <style>
     * {
@@ -12,117 +12,111 @@
     }
 
     html {
-      font-family: 'Courier New', monospace;
+      font-family: Courier, monospace;
       background: #fff;
       color: #000;
-      line-height: 1.6;
     }
 
     body {
-      padding: 2rem;
-      max-width: 1000px;
+      max-width: 960px;
       margin: 0 auto;
+      padding: 3rem 1rem;
     }
 
-    header h1 {
-      font-size: 4rem;
+    h1 {
+      font-size: 5rem;
       line-height: 1;
       text-transform: uppercase;
-      margin-bottom: 3rem;
+      letter-spacing: -1px;
+      margin-bottom: 2rem;
     }
 
-    nav ul {
-      list-style: none;
-      display: flex;
-      gap: 2rem;
+    nav {
       margin-bottom: 4rem;
     }
 
     nav a {
-      text-decoration: none;
-      color: black;
+      text-transform: uppercase;
       font-weight: bold;
-      text-transform: uppercase;
-    }
-
-    main section {
-      margin-bottom: 4rem;
-    }
-
-    h2 {
-      font-size: 1.5rem;
-      margin-bottom: 1rem;
-      text-transform: uppercase;
-    }
-
-    a {
-      color: black;
-      text-decoration: underline;
+      text-decoration: none;
+      color: #000;
+      margin-right: 2rem;
+      font-size: 0.9rem;
     }
 
     .grid {
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 1rem;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 0.5rem;
+      margin-bottom: 4rem;
     }
 
-    .grid img {
+    .grid a img {
       width: 100%;
       display: block;
       border: 1px solid black;
     }
 
+    section {
+      margin-bottom: 3rem;
+    }
+
+    h2 {
+      font-size: 1rem;
+      text-transform: uppercase;
+      margin-bottom: 0.5rem;
+    }
+
+    p, a {
+      font-size: 0.9rem;
+      line-height: 1.5;
+    }
+
+    a {
+      color: #000;
+      text-decoration: underline;
+    }
+
     @media (max-width: 600px) {
-      .grid {
-        grid-template-columns: 1fr;
+      h1 {
+        font-size: 3rem;
       }
 
-      header h1 {
-        font-size: 3rem;
+      nav a {
+        display: block;
+        margin-bottom: 0.5rem;
       }
     }
   </style>
 </head>
 <body>
-  <header>
-    <h1>ROMAN<br>FUCKING<br>MACDONALD</h1>
-  </header>
+  <h1>Roman<br>Fucking<br>Macdonald</h1>
 
   <nav>
-    <ul>
-      <li><a href="#work">work</a></li>
-      <li><a href="#about">about</a></li>
-      <li><a href="#contact">contact</a></li>
-    </ul>
+    <a href="#work">Work</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
   </nav>
 
-  <main>
-    <section id="work">
-      <h2>Selected Work</h2>
-      <div class="grid">
-        <a href="#"><img src="img/work1.jpg" alt="Project 1"></a>
-        <a href="#"><img src="img/work2.jpg" alt="Project 2"></a>
-        <a href="#"><img src="img/work3.jpg" alt="Project 3"></a>
-        <a href="#"><img src="img/work4.jpg" alt="Project 4"></a>
-        <a href="#"><img src="img/work5.jpg" alt="Project 5"></a>
-        <a href="#"><img src="img/work6.jpg" alt="Project 6"></a>
-      </div>
-    </section>
+  <section id="work">
+    <div class="grid">
+      <a href="#"><img src="img/work1.jpg" alt="Project 1"></a>
+      <a href="#"><img src="img/work2.jpg" alt="Project 2"></a>
+      <a href="#"><img src="img/work3.jpg" alt="Project 3"></a>
+      <a href="#"><img src="img/work4.jpg" alt="Project 4"></a>
+      <a href="#"><img src="img/work5.jpg" alt="Project 5"></a>
+      <a href="#"><img src="img/work6.jpg" alt="Project 6"></a>
+    </div>
+  </section>
 
-    <section id="about">
-      <h2>About</h2>
-      <p>I’m a visual communication designer based in Surabaya. Interested in brutalism, calisthenics, and ethical fashion. I build things that feel real.</p>
-    </section>
+  <section id="about">
+    <h2>About</h2>
+    <p>I’m a designer based in Surabaya. I like things raw, bold, and a little ugly in the best way. Right now I’m into brutalist design, calisthenics, and building sustainable fashion from scratch.</p>
+  </section>
 
-    <section id="contact">
-      <h2>Contact</h2>
-      <p>Email me at: <a href="mailto:hello@romanmacdonald.com">hello@romanmacdonald.com</a></p>
-    </section>
-  </main>
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>Email: <a href="mailto:hello@romanmacdonald.com">hello@romanmacdonald.com</a></p>
+  </section>
 </body>
 </html>
-
-
-</body></html>
-
-</body></html>
