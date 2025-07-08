@@ -6,6 +6,10 @@
   <title>Roman Macdonald — Portfolio</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
   <style>
+    * {
+      box-sizing: border-box;
+    }
+
     html, body {
       height: 100%;
       margin: 0;
@@ -17,6 +21,10 @@
     body {
       display: flex;
       flex-direction: column;
+    }
+
+    .content-wrapper {
+      flex: 1;
       padding: 2rem;
     }
 
@@ -25,7 +33,7 @@
     }
 
     .logo {
-      width: 800px;
+      width: 500px;
       height: auto;
       margin-bottom: 2rem;
     }
@@ -64,28 +72,45 @@
     }
 
     footer {
-      margin-top: auto;
+      padding: 1rem 2rem;
       font-size: 0.85rem;
       color: #666;
+      border-top: 1px solid #eee;
+    }
+
+    .plus-corner {
+      position: fixed;
+      bottom: 1rem;
+      right: 1rem;
+      font-size: 3rem;
+      font-weight: bold;
+      line-height: 1.1;
+      text-align: right;
+      white-space: pre;
+      pointer-events: none;
+      user-select: none;
     }
   </style>
 </head>
 <body>
-  <div class="sidebar">
-    <a href="index.html">
-      <img src="https://cdn.discordapp.com/attachments/885060651427459073/1392128876200591483/romansportfolio.png?ex=686e688c&is=686d170c&hm=2ad2818759cfc95877cf4d2f451890c4e7653aaa35b6197a132394f748af5740&" alt="logo" class="logo">
-    </a>
+  <div class="content-wrapper">
+    <div class="sidebar">
+      <a href="index.html">
+        <img src="https://cdn.discordapp.com/attachments/885060651427459073/1392128876200591483/romansportfolio.png?ex=686e688c&is=686d170c&hm=2ad2818759cfc95877cf4d2f451890c4e7653aaa35b6197a132394f748af5740&" alt="logo" class="logo">
+      </a>
 
-    <div class="nav-group">
-      <a href="personal-work.html"><h2 class="section-link">Personal Work</h2></a>
-      <a href="university-work.html"><h2 class="section-link">University Work</h2></a>
-      <a href="client-work.html"><h2 class="section-link">Client Work</h2></a>
+      <div class="nav-group">
+        <a href="personal-work.html"><h2 class="section-link">Personal Work</h2></a>
+        <a href="university-work.html"><h2 class="section-link">University Work</h2></a>
+        <a href="client-work.html"><h2 class="section-link">Client Work</h2></a>
+      </div>
     </div>
   </div>
 
   <footer>© Roman Macdonald</footer>
-</body>
-</html>
+
+  <div class="plus-corner">
+    +<br>++
   </div>
 </body>
 </html>
