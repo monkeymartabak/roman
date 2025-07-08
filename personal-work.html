@@ -14,24 +14,22 @@
       margin: 0;
       padding: 2rem;
       font-family: 'Inter', sans-serif;
+      display: flex;
       background: #fff;
       color: #000;
-      display: flex;
-      flex-direction: row;
     }
 
     .sidebar {
       max-width: 300px;
-      flex-shrink: 0;
       padding-right: 2rem;
       display: flex;
       flex-direction: column;
       align-items: flex-start;
     }
 
-    .icon {
+    .logo {
       width: 40px;
-      height: auto;
+      height: 40px;
       margin-bottom: 2rem;
     }
 
@@ -68,6 +66,12 @@
       font-weight: 800;
     }
 
+    footer {
+      margin-top: auto;
+      font-size: 0.85rem;
+      color: #666;
+    }
+
     .main-content {
       flex: 1;
     }
@@ -75,32 +79,34 @@
     .image-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 1rem;
+      gap: 1.5rem;
     }
 
     .image-wrapper {
-      width: 100%;
-      aspect-ratio: 1/1;
-      overflow: hidden;
       position: relative;
+      width: 100%;
+      padding-top: 100%; /* square aspect */
+      overflow: hidden;
     }
 
     .image-wrapper img {
-      width: 100%;
+      position: absolute;
+      top: 50%;
+      left: 50%;
       height: 100%;
+      width: 100%;
       object-fit: cover;
-      transition: transform 0.3s ease;
+      transform: translate(-50%, -50%);
+      transition: all 0.3s ease-in-out;
     }
 
     .image-wrapper:hover img {
-      transform: scale(2);
+      height: auto;
+      width: auto;
+      max-height: none;
+      max-width: none;
       object-fit: contain;
-    }
-
-    footer {
-      font-size: 0.85rem;
-      color: #666;
-      margin-top: 4rem;
+      z-index: 2;
     }
 
     @media (max-width: 768px) {
@@ -118,17 +124,19 @@
 </head>
 <body>
 
+  <!-- Sidebar -->
   <div class="sidebar">
-    <a href="index.html"><img src="https://cdn.discordapp.com/attachments/885060651427459073/1392190400487362733/chinken24x.png" alt="Top Icon" class="icon"></a>
+    <a href="index.html"><img src="https://cdn.discordapp.com/attachments/885060651427459073/1392190400487362733/chinken24x.png" alt="Top Icon" class="logo"></a>
     <h1>roman macdonald is a designer based in indonesia</h1>
 
-    <h2><a href="personal-work.html" class="nav-link">Personal Work</a></h2>
-    <h2><a href="university-work.html" class="nav-link">University Work</a></h2>
-    <h2><a href="client-work.html" class="nav-link">Client Work</a></h2>
+    <h2><a href="personal-work.html">Personal Work</a></h2>
+    <h2><a href="university-work.html">University Work</a></h2>
+    <h2><a href="client-work.html">Client Work</a></h2>
 
     <footer>© Roman Macdonald</footer>
   </div>
 
+  <!-- Main Content -->
   <div class="main-content">
     <div class="image-grid">
       <div class="image-wrapper">
@@ -149,10 +157,5 @@
     </div>
   </div>
 
-</body>
-</html>
-
-
-  <footer>© Roman Macdonald</footer>
 </body>
 </html>
