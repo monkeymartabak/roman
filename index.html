@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ROMAN FUCKING MACDONALD</title>
+  <title>roman macdonald</title>
   <style>
     * {
       margin: 0;
@@ -12,111 +12,129 @@
     }
 
     html {
-      font-family: Courier, monospace;
+      font-family: serif;
       background: #fff;
       color: #000;
     }
 
     body {
-      max-width: 960px;
+      max-width: 720px;
       margin: 0 auto;
-      padding: 3rem 1rem;
+      padding: 3rem 1.5rem;
     }
 
     h1 {
-      font-size: 5rem;
-      line-height: 1;
-      text-transform: uppercase;
-      letter-spacing: -1px;
-      margin-bottom: 2rem;
+      font-size: 2.5rem;
+      font-weight: normal;
+      text-transform: lowercase;
+      margin-bottom: 4rem;
     }
 
     nav {
-      margin-bottom: 4rem;
-    }
-
-    nav a {
-      text-transform: uppercase;
-      font-weight: bold;
-      text-decoration: none;
-      color: #000;
-      margin-right: 2rem;
-      font-size: 0.9rem;
-    }
-
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-      gap: 0.5rem;
-      margin-bottom: 4rem;
-    }
-
-    .grid a img {
-      width: 100%;
-      display: block;
-      border: 1px solid black;
-    }
-
-    section {
       margin-bottom: 3rem;
     }
 
+    nav a {
+      font-size: 0.9rem;
+      text-transform: lowercase;
+      color: #000;
+      text-decoration: none;
+      margin-right: 1.5rem;
+    }
+
+    section {
+      margin-bottom: 4rem;
+    }
+
+    .project {
+      margin-bottom: 2.5rem;
+    }
+
+    .project-title {
+      font-size: 1.25rem;
+      text-transform: lowercase;
+      text-decoration: none;
+      color: black;
+    }
+
+    .project-desc {
+      font-size: 0.85rem;
+      color: #333;
+      margin-top: 0.4rem;
+      max-width: 500px;
+    }
+
     h2 {
-      font-size: 1rem;
-      text-transform: uppercase;
-      margin-bottom: 0.5rem;
+      font-size: 0.9rem;
+      text-transform: lowercase;
+      margin-bottom: 0.8rem;
     }
 
     p, a {
       font-size: 0.9rem;
-      line-height: 1.5;
+      line-height: 1.6;
     }
 
-    a {
-      color: #000;
+    a:hover {
       text-decoration: underline;
     }
 
     @media (max-width: 600px) {
-      h1 {
-        font-size: 3rem;
+      body {
+        padding: 2rem 1rem;
       }
 
-      nav a {
-        display: block;
-        margin-bottom: 0.5rem;
+      h1 {
+        font-size: 2rem;
+      }
+
+      .project-title {
+        font-size: 1.1rem;
       }
     }
   </style>
 </head>
 <body>
-  <h1>Roman<br>Fucking<br>Macdonald</h1>
+
+  <h1>roman macdonald</h1>
 
   <nav>
-    <a href="#work">Work</a>
-    <a href="#about">About</a>
-    <a href="#contact">Contact</a>
+    <a href="#work">work</a>
+    <a href="#about">about</a>
+    <a href="#contact">contact</a>
   </nav>
 
   <section id="work">
-    <div class="grid">
-      <a href="#"><img src="img/work1.jpg" alt="Project 1"></a>
-      <a href="#"><img src="img/work2.jpg" alt="Project 2"></a>
-      <a href="#"><img src="img/work3.jpg" alt="Project 3"></a>
-      <a href="#"><img src="img/work4.jpg" alt="Project 4"></a>
-      <a href="#"><img src="img/work5.jpg" alt="Project 5"></a>
-      <a href="#"><img src="img/work6.jpg" alt="Project 6"></a>
+    <div class="project">
+      <a href="#" class="project-title">ethical fashion branding</a>
+      <p class="project-desc">identity and storytelling for a sustainable clothing brand focused on worker visibility and anti-fast fashion narratives.</p>
+    </div>
+
+    <div class="project">
+      <a href="#" class="project-title">mlaku surabaya</a>
+      <p class="project-desc">illustrated city map design project to encourage local tourism through clean, stylized wayfinding and landmark illustration.</p>
+    </div>
+
+    <div class="project">
+      <a href="#" class="project-title">sparkling surabaya</a>
+      <p class="project-desc">campaign redesign for surabaya’s city identity—rethinking the language, tone, and design language for youth tourism.</p>
+    </div>
+
+    <div class="project">
+      <a href="#" class="project-title">personal card game</a>
+      <p class="project-desc">a truth-or-dare-inspired self-reflection game that encourages players to embrace boredom and resist fomo.</p>
     </div>
   </section>
 
   <section id="about">
-    <h2>About</h2>
-    <p>I’m a designer based in Surabaya. I like things raw, bold, and a little ugly in the best way. Right now I’m into brutalist design, calisthenics, and building sustainable fashion from scratch.</p>
+    <h2>about</h2>
+    <p>i'm a visual communication design student based in surabaya, indonesia. i explore identity, language, and ethical design through branding, editorial, and experimental side projects.</p>
   </section>
 
   <section id="contact">
-    <h2>Contact</h2>
-    <p>Email: <a href="mailto:hello@romanmacdonald.com">hello@romanmacdonald.com</a></p>
+    <h2>contact</h2>
+    <p>email: <a href="mailto:hello@romanmacdonald.com">hello@romanmacdonald.com</a></p>
   </section>
+
 </body>
 </html>
