@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Roman Macdonald — Personal Work</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      padding: 2rem;
+      font-family: 'Inter', sans-serif;
+      background: #fff;
+      color: #000;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .logo {
+      width: 120px;
+      margin-bottom: 4rem;
+    }
+
+    .image-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 4rem;
+      width: 100%;
+      max-width: 900px;
+    }
+
+    .image-grid img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    footer {
+      margin-top: 6rem;
+      font-size: 0.85rem;
+      color: #666;
+    }
+
+    @media (min-width: 700px) {
+      .image-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <a href="index.html">
+    <img src="https://cdn.discordapp.com/attachments/885060651427459073/1392128876200591483/romansportfolio.png" alt="Logo" class="logo">
+  </a>
+
+  <div class="image-grid">
+    <img src="images/work1.jpg" alt="Work 1">
+    <img src="images/work2.jpg" alt="Work 2">
+    <img src="images/work3.jpg" alt="Work 3">
+    <img src="images/work4.jpg" alt="Work 4">
+    <!-- Add more as needed -->
+  </div>
+
+  <footer>© Roman Macdonald</footer>
+</body>
+</html>
