@@ -21,11 +21,13 @@
     body {
       display: flex;
       flex-direction: column;
+      position: relative;
     }
 
     .content-wrapper {
       flex: 1;
       padding: 2rem;
+      position: relative;
     }
 
     .sidebar {
@@ -35,7 +37,7 @@
     .logo {
       width: 350px;
       height: auto;
-      margin-bottom: 1rem; /* reduced for closer spacing */
+      margin-bottom: 1rem;
     }
 
     h1 {
@@ -52,10 +54,6 @@
       margin: 0.5rem 0;
       text-transform: uppercase;
       letter-spacing: 0.05em;
-    }
-
-    .nav-group {
-      margin-top: 0rem; /* tightened up */
     }
 
     .nav-group a {
@@ -77,15 +75,23 @@
       color: #666;
       border-top: 1px solid #eee;
     }
+
+    .link-wrapper {
+      position: absolute;
+      top: 50%;
+      left: 2rem;
+      transform: translateY(-50%);
+      max-width: 300px;
+    }
   </style>
 </head>
 <body>
   <div class="content-wrapper">
-    <div class="sidebar">
-      <a href="index.html">
-        <img src="https://cdn.discordapp.com/attachments/885060651427459073/1392128876200591483/romansportfolio.png?ex=686e688c&is=686d170c&hm=2ad2818759cfc95877cf4d2f451890c4e7653aaa35b6197a132394f748af5740&" alt="logo" class="logo">
-      </a>
+    <a href="index.html">
+      <img src="https://cdn.discordapp.com/attachments/885060651427459073/1392128876200591483/romansportfolio.png?ex=686e688c&is=686d170c&hm=2ad2818759cfc95877cf4d2f451890c4e7653aaa35b6197a132394f748af5740&" alt="logo" class="logo">
+    </a>
 
+    <div class="link-wrapper">
       <div class="nav-group">
         <a href="personal-work.html"><h2 class="section-link">Personal Work</h2></a>
         <a href="university-work.html"><h2 class="section-link">University Work</h2></a>
@@ -93,6 +99,10 @@
       </div>
     </div>
   </div>
+
+  <footer>© Roman Macdonald</footer>
+</body>
+</html>
 
   <footer>© Roman Macdonald</footer>
 </body>
