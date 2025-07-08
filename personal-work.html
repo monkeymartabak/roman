@@ -24,18 +24,23 @@
       padding: 2rem;
     }
 
+    .top-icon {
+      position: fixed;
+      top: 1.5rem;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 32px;
+      height: auto;
+      opacity: 0.8;
+    }
+
     .sidebar {
       width: 300px;
+      padding-top: 6rem; /* compensates for missing logo */
       padding-right: 2rem;
       display: flex;
       flex-direction: column;
       align-items: flex-start;
-    }
-
-    .logo {
-      width: 350px;
-      height: auto;
-      margin-bottom: 2rem;
     }
 
     .link-container {
@@ -78,7 +83,7 @@
     .image-wrapper {
       position: relative;
       width: 100%;
-      padding-top: 100%; /* square */
+      padding-top: 100%;
       overflow: hidden;
     }
 
@@ -117,12 +122,11 @@
 </head>
 <body>
 
+  <!-- Top-centered icon -->
+  <img src="https://cdn.discordapp.com/attachments/885060651427459073/1392190400487362733/chinken24x.png" alt="Top Icon" class="top-icon">
+
   <!-- Sidebar -->
   <div class="sidebar">
-    <a href="index.html">
-      <img src="https://cdn.discordapp.com/attachments/885060651427459073/1392128876200591483/romansportfolio.png" alt="logo" class="logo">
-    </a>
-
     <div class="link-container">
       <a href="personal-work.html" class="section-link">Personal Work</a>
       <a href="university-work.html" class="section-link">University Work</a>
@@ -136,7 +140,7 @@
   <div class="main-content">
     <div class="image-grid">
       <div class="image-wrapper">
-        <img src="https://media.canva.com/v2/image-resize/format:JPG/height:800/quality:92/uri:ifs%3A%2F%2FM%2Fa0cdcdd6-6c7f-4eec-8616-b923e021a916/watermark:F/width:640" alt="Work 1">
+        <img src="https://media.canva.com/v2/image-resize/format:JPG/height:800/quality:92/uri:ifs%3A%2F%2FM%2Fa0cdcdd6-6c7f-4eec-8616-b923e021a916/watermark:F/width:640?csig=AAAAAAAAAAAAAAAAAAAAAPIIcDauAIaK7Fl5jJ04V_SfxWVlDhfVZs15Ztxcgqfa&exp=1752005919&osig=AAAAAAAAAAAAAAAAAAAAALQLTy1SoaK-R0ZbZ-DeJik6oS5FiesehwBBZv5Bx4q8&signer=media-rpc&x-canva-quality=screen" alt="Work 1">
       </div>
       <div class="image-wrapper">
         <img src="https://media.canva.com/v2/image-resize/format:PNG/height:800/quality:100/uri:ifs%3A%2F%2FM%2Fe9bccf3a-bf0a-4ff5-a03a-fb0ad54d742d/watermark:F/width:640" alt="Work 2">
