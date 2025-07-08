@@ -36,7 +36,7 @@
 
     .sidebar {
       width: 300px;
-      padding-top: 6rem; /* compensates for missing logo */
+      padding-top: 6rem; /* Compensate for missing logo */
       padding-right: 2rem;
       display: flex;
       flex-direction: column;
@@ -72,39 +72,27 @@
 
     .main-content {
       flex: 1;
+      padding-top: 6rem; /* Push image grid lower */
     }
 
     .image-grid {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(4, 1fr);
       gap: 1rem;
+      max-width: 1000px;
     }
 
-    .image-wrapper {
-      position: relative;
+    .image-grid img {
       width: 100%;
-      padding-top: 100%;
-      overflow: hidden;
-    }
-
-    .image-wrapper img {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      height: 100%;
-      width: 100%;
+      aspect-ratio: 1 / 1;
       object-fit: cover;
-      transform: translate(-50%, -50%);
-      transition: all 0.3s ease-in-out;
+      display: block;
     }
 
-    .image-wrapper:hover img {
-      height: auto;
-      width: auto;
-      max-height: none;
-      max-width: none;
-      object-fit: contain;
-      z-index: 2;
+    @media (max-width: 1024px) {
+      .image-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
     }
 
     @media (max-width: 768px) {
@@ -113,7 +101,7 @@
       }
     }
 
-    @media (max-width: 500px) {
+    @media (max-width: 480px) {
       .image-grid {
         grid-template-columns: 1fr;
       }
@@ -123,7 +111,7 @@
 <body>
 
   <!-- Top-centered icon -->
-  <img src="https://cdn.discordapp.com/attachments/885060651427459073/1392190400487362733/chinken24x.png" alt="Top Icon" class="top-icon">
+  <img src="https://cdn.discordapp.com/attachments/885060651427459073/1392190400487362733/chinken24x.png?ex=686ea1d9&is=686d5059&hm=22d8a0f7add87f6e4eb67f8b201d8babedfb47a8d78abc61487b576cee431868&" alt="Top Icon" class="top-icon">
 
   <!-- Sidebar -->
   <div class="sidebar">
@@ -132,30 +120,19 @@
       <a href="university-work.html" class="section-link">University Work</a>
       <a href="client-work.html" class="section-link">Client Work</a>
     </div>
-
     <footer>© Roman Macdonald</footer>
   </div>
 
   <!-- Main Content -->
   <div class="main-content">
     <div class="image-grid">
-      <div class="image-wrapper">
-        <img src="https://media.canva.com/v2/image-resize/format:JPG/height:800/quality:92/uri:ifs%3A%2F%2FM%2Fa0cdcdd6-6c7f-4eec-8616-b923e021a916/watermark:F/width:640?csig=AAAAAAAAAAAAAAAAAAAAAPIIcDauAIaK7Fl5jJ04V_SfxWVlDhfVZs15Ztxcgqfa&exp=1752005919&osig=AAAAAAAAAAAAAAAAAAAAALQLTy1SoaK-R0ZbZ-DeJik6oS5FiesehwBBZv5Bx4q8&signer=media-rpc&x-canva-quality=screen" alt="Work 1">
-      </div>
-      <div class="image-wrapper">
-        <img src="https://media.canva.com/v2/image-resize/format:PNG/height:800/quality:100/uri:ifs%3A%2F%2FM%2Fe9bccf3a-bf0a-4ff5-a03a-fb0ad54d742d/watermark:F/width:640" alt="Work 2">
-      </div>
-      <div class="image-wrapper">
-        <img src="https://media.canva.com/v2/image-resize/format:PNG/height:800/quality:100/uri:ifs%3A%2F%2FM%2F7853663c-2e8b-4354-9e64-9851365be2a0/watermark:F/width:640" alt="Work 3">
-      </div>
-      <div class="image-wrapper">
-        <img src="https://media.canva.com/v2/image-resize/format:PNG/height:800/quality:100/uri:ifs%3A%2F%2FM%2F92ba9ac5-bfe0-45f6-8a10-ad1ac2023ab0/watermark:F/width:827" alt="Work 4">
-      </div>
-      <div class="image-wrapper">
-        <img src="https://scontent-cgk2-2.cdninstagram.com/v/t51.29350-15/448660762_461519793144912_5839706109620514212_n.jpg" alt="Work 5">
-      </div>
+      <img src="https://media.canva.com/v2/image-resize/format:PNG/height:800/quality:100/uri:ifs%3A%2F%2FM%2F92ba9ac5-bfe0-45f6-8a10-ad1ac2023ab0/watermark:F/width:827?csig=AAAAAAAAAAAAAAAAAAAAAEfIEzVkzGwCirQJczzY7QJDmKgg6Jdw6eGacf34Qy0t&exp=1752011479&osig=AAAAAAAAAAAAAAAAAAAAAPNTu45ZV1TmkuMG-17u3ScaC9rA1nfYmSScvDvbTIYV&signer=media-rpc&x-canva-quality=screen_2x" alt="Work 1">
+      <img src="https://media.canva.com/v2/image-resize/format:PNG/height:800/quality:100/uri:ifs%3A%2F%2FM%2Fe9bccf3a-bf0a-4ff5-a03a-fb0ad54d742d/watermark:F/width:640" alt="Work 2">
+      <img src="https://media.canva.com/v2/image-resize/format:PNG/height:800/quality:100/uri:ifs%3A%2F%2FM%2F7853663c-2e8b-4354-9e64-9851365be2a0/watermark:F/width:640" alt="Work 3">
+      <img src="https://media.canva.com/v2/image-resize/format:PNG/height:800/quality:100/uri:ifs%3A%2F%2FM%2F92ba9ac5-bfe0-45f6-8a10-ad1ac2023ab0/watermark:F/width:827" alt="Work 4">
+      <img src="https://scontent-cgk2-2.cdninstagram.com/v/t51.29350-15/448660762_461519793144912_5839706109620514212_n.jpg" alt="Work 5">
+      <!-- Add more <img> elements here as needed -->
     </div>
   </div>
 
 </body>
-</html>
